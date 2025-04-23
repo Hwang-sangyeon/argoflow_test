@@ -7,7 +7,7 @@ RUN mkdir -p $LENA_HOME/temp
 #RUN apt-get update && apt-get install -y \
 #    apache2-utils \
 #    && rm -rf /var/lib/apt/lists/*
-COPY ./ROOT.war $LENA_HOME/
+COPY /src/target/ROOT-3.4.4.war $LENA_HOME/ROOT.war
 RUN chmod u+x $LENA_HOME/*.sh
 
 WORKDIR $LENA_HOME
